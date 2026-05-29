@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Accueil | Abyssal</title>
+  <meta name="description" content="Abyssal — Plongez dans un jeu 2D sombre et mystérieux." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <canvas id="abyss-canvas"></canvas>
+  <div class="scanlines"></div>
+
+  <!-- NAV -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-container">
+      <a href="#accueil" class="nav-logo">
+        <span class="logo-pixel">▼</span> ABYSSAL
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+        <li><a href="#bienvenue" class="nav-link">Bienvenue</a></li>
+        <li><a href="#a-propos" class="nav-link">À propos</a></li>
+        <li><a href="#controles" class="nav-link">Contrôles</a></li>
+        <li><a href="#equipe" class="nav-link">Équipe</a></li>
+        <li><a href="setup_Abyssal.exe" download class="nav-cta">⬇ Jouer</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="accueil">
+      <div class="hero-content">
+        <div class="hero-badge">[ PROJET 2D ]</div>
+        <h1 class="hero-title">ABYSSAL</h1>
+        <p class="hero-subtitle">Rejoignez le monde Abyssal</p>
+        <p class="hero-desc">Un jeu 2D sombre et mystérieux vous attend.</p>
+        <div class="hero-actions">
+          <a href="setup_Abyssal.exe" download class="btn btn-primary">
+            <span>⬇ Jouer</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>Défiler</span>
+        <div class="scroll-arrow">▼</div>
+      </div>
+    </section>
+
+    <!-- BIENVENUE -->
+    <section class="section bienvenue" id="bienvenue">
+      <div class="container">
+        <div class="bienvenue-grid">
+          <div class="bienvenue-text reveal">
+            <span class="section-tag">// PRÉSENTATION</span>
+            <h2 class="section-title">Les Démons<br />d'Abyssal</h2>
+            <p class="body-text">
+              Abyssal est un projet de jeu 2D captivant, où les joueurs se lancent dans une aventure périlleuse en
+              affrontant des démons dans un univers sombre et mystérieux. Découvrez un monde riche en défis et en
+              énigmes, conçu pour vous offrir une expérience unique et immersive.
+            </p>
+            <p class="body-text">
+              Plongez dans l'action et explorez des territoires inexplorés, tout en repoussant les limites de vos
+              compétences.
+            </p>
+            <div class="stat-row">
+              <div class="stat-item"><span class="stat-num">2D</span><span class="stat-label">Pixel Art</span></div>
+              <div class="stat-item"><span class="stat-num">∞</span><span class="stat-label">Défis</span></div>
+              <div class="stat-item"><span class="stat-num">5</span><span class="stat-label">Créateurs</span></div>
+            </div>
+          </div>
+
+          <div class="bienvenue-visual reveal">
+            <div class="game-frame">
+              <div class="frame-header">
+                <span class="dot red"></span><span class="dot orange"></span><span class="dot green"></span>
+                <span class="frame-title">Abyssal</span>
+              </div>
+              <div class="game-preview">
+                <img src="media/capture_in_game.png" alt="Capture du jeu Abyssal" class="game-screenshot"
+                  loading="lazy" />
+                <div class="game-overlay-text">[ CAPTURE IN-GAME ]</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- À PROPOS -->
+    <section class="section a-propos" id="a-propos">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// À PROPOS</span>
+          <h2 class="section-title">L'Univers</h2>
+        </div>
+        <div class="apropos-grid">
+          <div class="apropos-card reveal">
+            <div class="card-icon">⚔</div>
+            <h3>Combat</h3>
+            <p>Affrontez des démons redoutables dans des combats intenses. Chaque ennemi possède ses propres patterns et
+              faiblesses à exploiter.</p>
+          </div>
+          <div class="apropos-card reveal">
+            <div class="card-icon">🗺</div>
+            <h3>Exploration</h3>
+            <p>Explorez des territoires inexplorés et découvrez les secrets d'un monde sombre et mystérieux, rempli de
+              surprises et de trésors cachés.</p>
+          </div>
+          <div class="apropos-card reveal">
+            <div class="card-icon">🧩</div>
+            <h3>Énigmes</h3>
+            <p>Résolvez des énigmes complexes pour progresser dans l'aventure et déverrouiller de nouvelles zones de
+              l'Abyssal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTRÔLES -->
+    <section class="section controles" id="controles">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// TOUCHES</span>
+          <h2 class="section-title">Contrôles</h2>
+          <p class="section-subtitle">Maîtrisez chaque déplacement.</p>
+        </div>
+
+        <div class="controls-grid">
+
+          <div class="control-group reveal">
+            <h3 class="control-group-title">Déplacement</h3>
+            <div class="key-layout">
+              <div class="key-row">
+                <div class="key-wrapper">
+                  <div class="kbd-key">
+                    <svg viewBox="0 0 36 36" width="18" height="18" aria-hidden="true" style="color:#C8742A">
+                      <line x1="18" y1="28" x2="18" y2="10" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+                      <polyline points="10,19 18,10 26,19" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <span class="key-label">Avancer</span>
+                </div>
+              </div>
+              <div class="key-row">
+                <div class="key-wrapper">
+                  <div class="kbd-key">
+                    <svg viewBox="0 0 36 36" width="18" height="18" aria-hidden="true" style="color:#C8742A">
+                      <line x1="26" y1="18" x2="8" y2="18" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+                      <polyline points="17,10 8,18 17,26" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <span class="key-label">Gauche</span>
+                </div>
+                <div class="key-wrapper">
+                  <div class="kbd-key">
+                    <svg viewBox="0 0 36 36" width="18" height="18" aria-hidden="true" style="color:#C8742A">
+                      <line x1="18" y1="8" x2="18" y2="26" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+                      <polyline points="10,17 18,26 26,17" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <span class="key-label">Reculer</span>
+                </div>
+                <div class="key-wrapper">
+                  <div class="kbd-key">
+                    <svg viewBox="0 0 36 36" width="18" height="18" aria-hidden="true" style="color:#C8742A">
+                      <line x1="10" y1="18" x2="28" y2="18" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+                      <polyline points="19,10 28,18 19,26" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <span class="key-label">Droite</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="control-group reveal">
+            <h3 class="control-group-title">Actions</h3>
+            <div class="action-keys">
+              <div class="action-key">
+                <div class="kbd-key kbd-wide"><span class="kbd-text">⇧ Shift</span></div>
+                <span>Courir</span>
+              </div>
+              <div class="action-key">
+                <div class="kbd-key">
+                  <svg viewBox="0 0 36 36" width="18" height="18" aria-hidden="true" style="color:#C8742A">
+                    <rect x="10" y="4" width="16" height="28" rx="8" stroke="currentColor" stroke-width="3" fill="none" />
+                    <path d="M 10 14 L 10 12 A 8 8 0 0 1 18 4 L 18 14 Z" fill="currentColor" />
+                    <line x1="10" y1="14" x2="26" y2="14" stroke="currentColor" stroke-width="3" />
+                    <line x1="18" y1="4" x2="18" y2="14" stroke="currentColor" stroke-width="3" />
+                  </svg>
+                </div>
+                <span>Attaquer</span>
+              </div>
+              <div class="action-key">
+                <div class="kbd-key"><span class="kbd-text">G</span></div>
+                <span>Jeter</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="control-group reveal">
+            <h3 class="control-group-title">Affichages</h3>
+            <div class="display-keys">
+              <div class="display-item">
+                <div class="kbd-key kbd-fn"><span class="kbd-text">F11</span></div>
+                <span>Plein écran</span>
+              </div>
+              <div class="display-item">
+                <div class="kbd-key kbd-fn"><span class="kbd-text">F3</span></div>
+                <span>Afficher les FPS</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ÉQUIPE -->
+    <section class="section equipe" id="equipe">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// ÉQUIPE</span>
+          <h2 class="section-title">Les Flemmards<br />Bien Dodus</h2>
+          <p class="section-subtitle">Les créateurs derrière l'aventure.</p>
+        </div>
+        <div class="team-grid">
+          <div class="team-card reveal">
+            <div class="team-avatar-frame"><img src="https://static.wixstatic.com/media/bd2840_2728a25c8b9f4e3f92300983d1ad9aa1~mv2.jpg/v1/fill/w_142,h_142,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bd2840_2728a25c8b9f4e3f92300983d1ad9aa1~mv2.jpg" alt="Valentin Summy" loading="lazy" /></div>
+            <h3 class="team-name">Valentin SUMMY</h3>
+            <p class="team-role">Coordination · Graphisme</p>
+          </div>
+          <div class="team-card reveal">
+            <div class="team-avatar-frame"><img src="https://static.wixstatic.com/media/bd2840_0f65c26b58844f97ae61641e338488ce~mv2.jpg/v1/fill/w_142,h_142,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/valentin_dupuis_dc723f3c-7583-4a70-936b-3c841c5a5db8-square.jpg" alt="Valentin Dupuis" loading="lazy" /></div>
+            <h3 class="team-name">Valentin DUPUIS</h3>
+            <p class="team-role">Graphisme · Programmation</p>
+          </div>
+          <div class="team-card reveal">
+            <div class="team-avatar-frame"><img src="https://static.wixstatic.com/media/bd2840_ac243974672e4e8083bbfb7673f7ab05~mv2.jpg/v1/fill/w_142,h_142,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bd2840_ac243974672e4e8083bbfb7673f7ab05~mv2.jpg" alt="Tsiory Randriatsarafara" loading="lazy" /></div>
+            <h3 class="team-name">Tsiory RANDRIATSARAFARA</h3>
+            <p class="team-role">Narration · Programmation</p>
+          </div>
+          <div class="team-card reveal">
+            <div class="team-avatar-frame"><img src="https://static.wixstatic.com/media/bd2840_0a56bfda9a3a446b9e6ded343b800a8a~mv2.jpg/v1/fill/w_142,h_142,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bd2840_0a56bfda9a3a446b9e6ded343b800a8a~mv2.jpg" alt="Romain Descartes" loading="lazy" /></div>
+            <h3 class="team-name">Romain DESCARTES</h3>
+            <p class="team-role">Programmation · Technique</p>
+          </div>
+          <div class="team-card reveal">
+            <div class="team-avatar-frame"><img src="https://static.wixstatic.com/media/bd2840_9386f35aabd74805b0789916887257fb~mv2.jpg/v1/fill/w_142,h_142,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bd2840_9386f35aabd74805b0789916887257fb~mv2.jpg" alt="Matthéo Nguyen" loading="lazy" /></div>
+            <h3 class="team-name">Matthéo NGUYEN</h3>
+            <p class="team-role">Gameplay · Design</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+
+        <div class="footer-col">
+          <div class="footer-logo"><span class="logo-pixel">▼</span> ABYSSAL</div>
+          <p class="footer-desc">Un jeu 2D sombre et mystérieux, développé avec passion par les Flemmards Bien Dodus.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Liens importants</h4>
+          <ul class="footer-list">
+            <li><a href="setup_Abyssal.exe" download class="footer-link-important">▸ Jouer / Installer</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Technologies utilisées</h4>
+          <ul class="footer-list">
+            <li><a href="https://www.pygame.org/docs/" target="_blank" rel="noopener">▸ pygame</a></li>
+            <li><a href="https://pyscroll.readthedocs.io/en/latest/" target="_blank" rel="noopener">▸ pyscroll</a></li>
+            <li><a href="https://pypi.org/project/requests/" target="_blank" rel="noopener">▸ requests</a></li>
+            <li><a href="https://pytmx.readthedocs.io/en/latest/" target="_blank" rel="noopener">▸ pytmx</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-list">
+            <li><a href="#accueil">▸ Accueil</a></li>
+            <li><a href="#bienvenue">▸ Bienvenue</a></li>
+            <li><a href="#a-propos">▸ À propos</a></li>
+            <li><a href="#controles">▸ Contrôles</a></li>
+            <li><a href="#equipe">▸ Équipe</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Les Flemmards Bien Dodus — Tous droits réservés.</p>
+        <a href="#accueil" class="footer-top-link">Retour en haut ↑</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
